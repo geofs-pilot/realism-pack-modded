@@ -319,7 +319,7 @@ loadInterval = setInterval(function(){
         runEjections();
     };
 
-geofs.aircraft.instance.animationValue.spoilerArming = 0
+/*geofs.aircraft.instance.animationValue.spoilerArming = 0
 
 controls.setters.setSpoilerArming = {
     label: "Spoiler Arming",
@@ -366,7 +366,7 @@ setInterval(
             geofs.aircraft.instance.animationValue.spoilerArming = 0;
         }
     },
-100)
+100) */
 
 //add spoiler indicator for those planes that do not have it by themselves
 setInterval(
