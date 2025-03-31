@@ -393,6 +393,7 @@ loadInterval = setInterval(function(){
 	//set the whole bs on an interval so it all ticks along nicely
 	ejectionInterval = setInterval(function(){checkForEjections()}, 500);
 	}
+runEjections();
 
 /*geofs.aircraft.instance.animationValue.spoilerArming = 0
 
