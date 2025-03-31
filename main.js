@@ -341,7 +341,7 @@ loadInterval = setInterval(function(){
 	//switch you to a paraglider in two seconds (parachute inflation time)
 	setTimeout(() => {geofs.aircraft.instance.change(50);}, 2000);
 	//tell you what you did
-	ui.notification.show("You ejected from your aircraft");
+	//ui.notification.show("You ejected from your aircraft");
 	//play the "ejection sound"
 	audio.impl.html5.playFile("https://138772948-227015667470610340.preview.editmysite.com/uploads/1/3/8/7/138772948/softtouch.mp3");
 	//canopy animation - with animation.values.eject set to 1, the canopy teleports out of view
