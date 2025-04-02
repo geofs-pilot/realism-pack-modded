@@ -54,7 +54,7 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
         }
     },1000)
     propwashInt = setInterval(function(){
-        if (geofs.aircraft.instance.id == 21 || geofs.aircraft.instance.id == 2 || geofs.aircraft.instance.id == 2808 || geofs.aircraft.instance.id == 1 || geofs.aircraft.instance.id == 8 || geofs.aircraft.instance.id == 12 || geofs.aircraft.instance.id == 13 || geofs.aircraft.instance.id == 40 || geofs.aircraft.instance.id == 1069 || geofs.aircraft.instance.id == 2750 || geofs.aircraft.instance.id == 4251)  {
+        if (geofs.aircraft.instance.id == 21 || geofs.aircraft.instance.id == 2 || geofs.aircraft.instance.id == 2808 || geofs.aircraft.instance.id == 1 || geofs.aircraft.instance.id == 8 || geofs.aircraft.instance.id == 12 || geofs.aircraft.instance.id == 13 || geofs.aircraft.instance.id == 40 || geofs.aircraft.instance.id == 1069 || geofs.aircraft.instance.id == 2750 || geofs.aircraft.instance.id == 4251 || geofs.aircraft.instance.id == 2786 || geofs.aircraft.instance.id == 2976 || geofs.aircraft.instance.id == 4390 || geofs.aircraft.instance.id == 5061 || geofs.aircraft.instance.id == 4341 || geofs.aircraft.instance.id == 3211 || geofs.aircraft.instance.id == 4596 || geofs.aircraft.instance.id == 4409 || geofs.aircraft.instance.id == 22 || geofs.aircraft.instance.id == 23 || geofs.aircraft.instance.id == 31 || geofs.aircraft.instance.id == 11)  {
     if (geofsAddonAircraft.isTruck != 1) {
     geofs.aircraft.instance.airfoils.forEach(function(e){
     if (e.forceDirection == 2) {
@@ -66,7 +66,7 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
     geofs.aircraft.instance.setup.parts[0].centerOfMass = [geofs.animation.values.rpm/1000, 0, 0]
        }
         }
-    })
+    }, 10)
 blackoutLoadInt = setInterval(function(){
    if (geofs.fx.atmosphere.atmospherePostProcessStage._ready == true) {
 geofs["overlayG.glsl"] = "" + `
