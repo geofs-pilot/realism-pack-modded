@@ -283,7 +283,7 @@ clearInterval(blackoutLoadInt)
     document.body.appendChild(scriptVC);
     scriptVC.onload = function () {
         runVortexCons();
-    };
+    }; 
     var scriptFBW = document.createElement("script");
     scriptFBW.src = "https://raw.githack.com/NVB9ALT/Fighter-jet-FBW/main/main.js";
     document.body.appendChild(scriptFBW);
@@ -321,7 +321,7 @@ loadInterval = setInterval(function(){
 	var ejected = new Boolean(1);
 	function checkForEjections() {
 	//if in an aircraft with ejection seats
-	if (geofs.aircraft.instance.id == 3 || geofs.aircraft.instance.id == 7 || geofs.aircraft.instance.id == 18 || geofs.aircraft.instance.id == 4172 || geofs.aircraft.instance.id == 3617 || geofs.aircraft.instance.id == 2581 || geofs.aircraft.instance.id == 2857 || geofs.aircraft.instance.id == 2948 || geofs.aircraft.instance.id == 2988 || geofs.aircraft.instance.id == 2310 || geofs.aircraft.instance.id == 3591 || geofs.aircraft.instance.id == 5229 || geofs.aircraft.instance.id == 2364) {
+	if (geofs.aircraft.instance.id == 3 || geofs.aircraft.instance.id == 7 || geofs.aircraft.instance.id == 29 || geofs.aircraft.instance.id == 18 || geofs.aircraft.instance.id == 4172 || geofs.aircraft.instance.id == 3617 || geofs.aircraft.instance.id == 2581 || geofs.aircraft.instance.id == 2857 || geofs.aircraft.instance.id == 2948 || geofs.aircraft.instance.id == 2988 || geofs.aircraft.instance.id == 2310 || geofs.aircraft.instance.id == 3591 || geofs.aircraft.instance.id == 5229 || geofs.aircraft.instance.id == 2364) {
 	//notifying you of the existence of ejection seats
 	if (notifiedEject == 0) {
 	ui.notification.show("Press E while airborne to eject");
