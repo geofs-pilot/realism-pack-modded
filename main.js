@@ -7,12 +7,12 @@ console.log("Original scripts for immersion SFX, stall buffet, carrier catapults
 
 
 function gBreath() {
-   if (geofs.animation.values.loadFactor >= 3) {
+   if (geofs.animation.values.loadFactor >= 3 && !geofs.pause) {
 audio.impl.html5.playFile("https://142420819-645052386429616373.preview.editmysite.com/uploads/1/4/2/4/142420819/cutgbreath.mp3")
 	}
 }
 function flankerStall() {
-   if (geofs.aircraft.instance.id == 18 && geofsAddonAircraft.isSu27 == 1 && geofs.animation.values.cobraMode == 1) {
+   if (geofs.aircraft.instance.id == 18 && geofsAddonAircraft.isSu27 == 1 && geofs.animation.values.cobraMode == 1  && !geofs.pause) {
 audio.impl.html5.playFile("https://142420819-645052386429616373.preview.editmysite.com/uploads/1/4/2/4/142420819/flankerstall.m4a")
 	}
 }
@@ -37,7 +37,7 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
     }
     function doShake() {
       getShake() 
-      if (geofs.animation.values.aoa >= 10 && geofs.aircraft.instance.id != 4) {
+      if (geofs.animation.values.aoa >= 10 && geofs.aircraft.instance.id != 4 && !geofs.pause) {
       geofs.camera.translate(0.0001 * geofs.animation.values.shake,0.0001 * geofs.animation.values.shake,0.0001 * geofs.animation.values.shake)
       setTimeout(function(){
         geofs.camera.translate(-0.0001 * geofs.animation.values.shake,-0.0001 * geofs.animation.values.shake,-0.0001 * geofs.animation.values.shake)
@@ -46,10 +46,10 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
     }
     shakeInterval = setInterval(function(){doShake()},10)
     gSoundInt = setInterval(function(){
-       if (geofs.animation.values.accZ >= 50 && geofs.animation.values.view == "cockpit") {
+       if (geofs.animation.values.accZ >= 50 && geofs.animation.values.view == "cockpit" && !geofs.pause) {
     audio.impl.html5.playFile("https://142420819-645052386429616373.preview.editmysite.com/uploads/1/4/2/4/142420819/wind.mp3")
         }
-       if (geofs.animation.values.accZ >= 70 && geofs.animation.values.view == "cockpit") {
+       if (geofs.animation.values.accZ >= 70 && geofs.animation.values.view == "cockpit" && !geofs.pause) {
     audio.impl.html5.playFile("https://142420819-645052386429616373.preview.editmysite.com/uploads/1/4/2/4/142420819/wind.mp3")
         }
     },1000)
@@ -566,7 +566,7 @@ setInterval(
     
         function checkFora320() {
         if (geofs.aircraft.instance.id == 2865 || geofs.aircraft.instance.id == 2870 || geofs.aircraft.instance.id == 2871 || geofs.aircraft.instance.id == 242 || geofs.aircraft.instance.id == 2843 || geofs.aircraft.instance.id == 2899 || geofs.aircraft.instance.id == 24 || geofs.aircraft.instance.id == 2973) { //if the aircraft currently being flown is a320 or a220 or a350
-        if (a320Sounds != geofs.aircraft.instance.id){ //if the script hasn't already run on this aircraft
+	if (a320Sounds != geofs.aircraft.instance.id){ //if the script hasn't already run on this aircraft
         //preventing errors
                 clearInterval(soundInt);
                 clearInterval(tcasIntervalAnnounce);
