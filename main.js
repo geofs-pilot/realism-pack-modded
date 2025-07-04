@@ -217,7 +217,7 @@ clearInterval(blackoutLoadInt)
     geofs.aircraftList["1000"].dir = "|models|aircraft|generics|c182|";
     var aircraftChecked = new Boolean(0);
     var script2 = document.createElement("script");
-    script2.src = "https://raw.githack.com/NVB9ALT/GeoFS-Aircraft-Changes/main/Aircraft-fixes.js";
+    script2.src = "https://raw.githack.com/geofs-pilot/test/main/test.js";
     document.body.appendChild(script2);
     script2.onload = function () {
         realismify();
@@ -279,7 +279,7 @@ clearInterval(blackoutLoadInt)
         runClickableCockpits();
     };
     var scriptVC = document.createElement("script");
-    scriptVC.src = "https://raw.githack.com/NVB9ALT/GeoFS-Effects-Rework/main/vortexCon.js";
+    scriptVC.src = "https://raw.githack.com/geofs-pilot/vortexCon-f-16-fix/main/vcon.js";
     document.body.appendChild(scriptVC);
     scriptVC.onload = function () {
         runVortexCons();
@@ -604,7 +604,7 @@ setInterval(
             clearInterval(flexInterval);
     //running the script
     var script737 = document.createElement('script'); 
-    script737.src="https://raw.githack.com/AbnormalHuman/GeoFS-737-Immersion-SFX/main/index.js";
+    script737.src="https://raw.githack.com/Ariakim-Taiyo/GeoFS-737-Immersion-SFX/main/index.js";
     document.body.appendChild(script737);
     script737.onload = function(){clearInterval(tcasIntervalAnnounce)};
     
