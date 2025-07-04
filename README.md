@@ -5,3 +5,5 @@ removed carrier catapults <br/>
 added 6 ejectable acft, xb70, x15, a10, dassault mirage, f14, f15, f22, f35, sr71, alphajet, f16, su35 <br/>
 added a bunch more propwash acft <br/>
 updated fbw
+updated vortexcon to include f16 - name is bodyH not body
+updated a typo in 737 immersion sounds - author is Ariakim Taiyo not AbormalHuman
