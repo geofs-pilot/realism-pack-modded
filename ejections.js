@@ -92,7 +92,7 @@
 
                         geofs.camera.translate(b, c, fall);
                         
-                        console.log(fall)
+                        //console.log(fall)
                     
 
 
