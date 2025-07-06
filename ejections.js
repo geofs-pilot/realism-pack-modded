@@ -12,9 +12,10 @@
                 if (notifiedEject == 0) {
                     ui.notification.show("Press E while airborne to eject");
                     setTimeout(() => {
-                        const OkBtn = document.querySelector(".geofs-closeHaring-button");
-                        if (OkBtn) OkBtn.click();
+                        let notif = document.querySelector(".geofs-haring");
+                        if (notif) notif.remove();
                     }, 3000);
+
 
                     notifiedEject = 1
                 };
