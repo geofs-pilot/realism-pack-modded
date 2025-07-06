@@ -516,7 +516,7 @@ setInterval(
     flexInterval = null;
     
     function checkForBoeing737() {
-    if (geofs.aircraft.instance.id == 4 || geofs.aircraft.instance.id == 3054) { //if the aircraft currently being flown is a 737
+    if (geofs.aircraft.instance.aircraftRecord.name.includes("Boeing") && geofs.aircraft.instance.aircraftRecord.name.includes("737")) { //if the aircraft currently being flown is a 737
     if (b737Sounds != geofs.aircraft.instance.id){ //if the script hasn't already run on this aircraft
     //preventing errors
             clearInterval(soundInt);
@@ -559,7 +559,7 @@ setInterval(
     
     function checkForBoeing777() {
     
-    if (geofs.aircraft.instance.id == 240 || geofs.aircraft.instance.id == 25 || geofs.aircraft.instance.id == 4402) {
+    if (geofs.aircraft.instance.aircraftRecord.name.includes("Boeing") && geofs.aircraft.instance.aircraftRecord.name.includes("777")) {
     if (b777sounds == 0){
     
     var script777 = document.createElement('script'); 
