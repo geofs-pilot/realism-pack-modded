@@ -525,7 +525,7 @@ setInterval(
             clearInterval(flexInterval);
     //running the script
     var script737 = document.createElement('script'); 
-    script737.src="https://raw.githubusercontent.com/geofs-pilot/realism-pack-modded/main/SFX.js";
+    script737.src="https://cdn.jsdelivr.net/gh/geofs-pilot/realism-pack-modded/SFX.js";
     document.body.appendChild(script737);
     script737.onload = function(){clearInterval(tcasIntervalAnnounce)};
     
