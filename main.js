@@ -504,117 +504,117 @@ setInterval(
     }
     };checkOverlayInt = setInterval(function(){checkOverlays()},1000)
     
-    console.log("Original immersion SFX scripts copyright Ariakim Taiyo");
-    console.log("Modified by NVB9 and Kolos26");
+    // console.log("Original immersion SFX scripts copyright Ariakim Taiyo");
+    // console.log("Modified by NVB9 and Kolos26");
     
-    //variable to tell if the script has run or not
-    var b737Sounds = 0
-    soundInt = null;
-    tcasIntervalAnnounce = null;
-    effectInterval = null;
-    accelInt = null;
-    flexInterval = null;
+    // //variable to tell if the script has run or not
+    // var b737Sounds = 0
+    // soundInt = null;
+    // tcasIntervalAnnounce = null;
+    // effectInterval = null;
+    // accelInt = null;
+    // flexInterval = null;
     
-    function checkForBoeing737() {
-    if (geofs.aircraft.instance.aircraftRecord.name.includes("Boeing") && geofs.aircraft.instance.aircraftRecord.name.includes("737")) { //if the aircraft currently being flown is a 737
-    if (b737Sounds != geofs.aircraft.instance.id){ //if the script hasn't already run on this aircraft
-    //preventing errors
-            clearInterval(soundInt);
-            clearInterval(tcasIntervalAnnounce);
-            clearInterval(accelInt);
-            clearInterval(flexInterval);
-    //running the script
-    var script737 = document.createElement('script'); 
-    script737.src="https://cdn.jsdelivr.net/gh/geofs-pilot/realism-pack-modded/SFX.js";
-    document.body.appendChild(script737);
-    script737.onload = function(){clearInterval(tcasIntervalAnnounce)};
+    // function checkForBoeing737() {
+    // if (geofs.aircraft.instance.aircraftRecord.name.includes("Boeing") && geofs.aircraft.instance.aircraftRecord.name.includes("737")) { //if the aircraft currently being flown is a 737
+    // if (b737Sounds != geofs.aircraft.instance.id){ //if the script hasn't already run on this aircraft
+    // //preventing errors
+    //         clearInterval(soundInt);
+    //         clearInterval(tcasIntervalAnnounce);
+    //         clearInterval(accelInt);
+    //         clearInterval(flexInterval);
+    // //running the script
+    // var script737 = document.createElement('script'); 
+    // script737.src="https://cdn.jsdelivr.net/gh/geofs-pilot/realism-pack-modded/SFX.js";
+    // document.body.appendChild(script737);
+    // script737.onload = function(){clearInterval(tcasIntervalAnnounce)};
     
-    //script has run now, so we change scriptHasRun to avoid having the script execute multiple times per aircraft instance
-    //this avoids massive lag
-    b737Sounds = geofs.aircraft.instance.id
-          }
-       }
-    //if the aircraft isn't a 737
-    else {
-    //clearing the script when the aircraft isn't a 737 to avoid filling up the console with errors
-    if (typeof soundInt != undefined) {
-       clearInterval(soundInt)
-       clearInterval(tcasIntervalAnnounce)
-       clearInterval(accelInt)
-       clearInterval(flexInterval)
-    } else {
-    void(0)
-    };
-    //making sure the script can run again next time a 737 is selected
-        b737Sounds = 0
-       }
-    }
+    // //script has run now, so we change scriptHasRun to avoid having the script execute multiple times per aircraft instance
+    // //this avoids massive lag
+    // b737Sounds = geofs.aircraft.instance.id
+    //       }
+    //    }
+    // //if the aircraft isn't a 737
+    // else {
+    // //clearing the script when the aircraft isn't a 737 to avoid filling up the console with errors
+    // if (typeof soundInt != undefined) {
+    //    clearInterval(soundInt)
+    //    clearInterval(tcasIntervalAnnounce)
+    //    clearInterval(accelInt)
+    //    clearInterval(flexInterval)
+    // } else {
+    // void(0)
+    // };
+    // //making sure the script can run again next time a 737 is selected
+    //     b737Sounds = 0
+    //    }
+    // }
     
-    //running the above function once per second
-    checkInterval = setInterval(function(){
-    checkForBoeing737()
-    }, 1000)
+    // //running the above function once per second
+    // checkInterval = setInterval(function(){
+    // checkForBoeing737()
+    // }, 1000)
     
-    var b777sounds = new Boolean(0)
+    // var b777sounds = new Boolean(0)
     
-    function checkForBoeing777() {
+    // function checkForBoeing777() {
     
-    if (geofs.aircraft.instance.aircraftRecord.name.includes("Boeing") && geofs.aircraft.instance.aircraftRecord.name.includes("777")) {
-    if (b777sounds == 0){
+    // if (geofs.aircraft.instance.aircraftRecord.name.includes("Boeing") && geofs.aircraft.instance.aircraftRecord.name.includes("777")) {
+    // if (b777sounds == 0){
     
-    var script777 = document.createElement('script'); 
-    script777.src="https://cdn.jsdelivr.net/gh/NVB9ALT/777-Realism-Overhaul-for-Realism-Addon@main/indexA.js";
-    document.body.appendChild(script777);
-    script777.onload = function (){change777s()}
+    // var script777 = document.createElement('script'); 
+    // script777.src="https://cdn.jsdelivr.net/gh/NVB9ALT/777-Realism-Overhaul-for-Realism-Addon@main/indexA.js";
+    // document.body.appendChild(script777);
+    // script777.onload = function (){change777s()}
     
-    b777sounds = 1
-          }
-       } else {
-    if (typeof effectInterval != undefined) {
-       clearInterval(effectInterval)
-    } else {
-       void(0)
-    }
-        b777sounds = 0
-       }
-    }
+    // b777sounds = 1
+    //       }
+    //    } else {
+    // if (typeof effectInterval != undefined) {
+    //    clearInterval(effectInterval)
+    // } else {
+    //    void(0)
+    // }
+    //     b777sounds = 0
+    //    }
+    // }
     
-    checkInterval1 = setInterval(function(){
-    checkForBoeing777()
-    }, 1000)
+    // checkInterval1 = setInterval(function(){
+    // checkForBoeing777()
+    // }, 1000)
     
-    //variable to tell if the script has run or not
-        var a320Sounds = 0
+    // //variable to tell if the script has run or not
+    //     var a320Sounds = 0
     
-        function checkFora320() {
-        if (geofs.aircraft.instance.id == 2865 || geofs.aircraft.instance.id == 2870 || geofs.aircraft.instance.id == 2871 || geofs.aircraft.instance.id == 242 || geofs.aircraft.instance.id == 2843 || geofs.aircraft.instance.id == 2899 || geofs.aircraft.instance.id == 24 || geofs.aircraft.instance.id == 2973) { //if the aircraft currently being flown is a320 or a220 or a350
-	if (a320Sounds != geofs.aircraft.instance.id){ //if the script hasn't already run on this aircraft
-        //preventing errors
-                clearInterval(soundInt);
-                clearInterval(tcasIntervalAnnounce);
-                clearInterval(accelInt);
-                clearInterval(flexInterval);
-        //running the script
-        var a320script = document.createElement('script'); 
-        a320script.src="https://raw.githack.com/kolos26/geofs-a320neo-sounds-byAriakimTaiyo/main/sounds.js";
-        document.body.appendChild(a320script);
+    //     function checkFora320() {
+    //     if (geofs.aircraft.instance.id == 2865 || geofs.aircraft.instance.id == 2870 || geofs.aircraft.instance.id == 2871 || geofs.aircraft.instance.id == 242 || geofs.aircraft.instance.id == 2843 || geofs.aircraft.instance.id == 2899 || geofs.aircraft.instance.id == 24 || geofs.aircraft.instance.id == 2973) { //if the aircraft currently being flown is a320 or a220 or a350
+	// if (a320Sounds != geofs.aircraft.instance.id){ //if the script hasn't already run on this aircraft
+    //     //preventing errors
+    //             clearInterval(soundInt);
+    //             clearInterval(tcasIntervalAnnounce);
+    //             clearInterval(accelInt);
+    //             clearInterval(flexInterval);
+    //     //running the script
+    //     var a320script = document.createElement('script'); 
+    //     a320script.src="https://raw.githack.com/kolos26/geofs-a320neo-sounds-byAriakimTaiyo/main/sounds.js";
+    //     document.body.appendChild(a320script);
     
-        //script has run now, so we change scriptHasRun to avoid having the script execute multiple times per aircraft instance
-        //this avoids massive lag
-        a320Sounds = geofs.aircraft.instance.id
-            }
-        }
-        //if the aircraft isn't a 320
-        else {
-            //making sure the script can run again next time a 320 is selected
-            a320Sounds = 0
-        }
-        }
+    //     //script has run now, so we change scriptHasRun to avoid having the script execute multiple times per aircraft instance
+    //     //this avoids massive lag
+    //     a320Sounds = geofs.aircraft.instance.id
+    //         }
+    //     }
+    //     //if the aircraft isn't a 320
+    //     else {
+    //         //making sure the script can run again next time a 320 is selected
+    //         a320Sounds = 0
+    //     }
+    //     }
     
-        //running the above function once per second
-        checkInterval2 = setInterval(function(){
-        checkFora320()
-        }, 1000)
+    //     //running the above function once per second
+    //     checkInterval2 = setInterval(function(){
+    //     checkFora320()
+    //     }, 1000)
     
     
     
