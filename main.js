@@ -217,7 +217,7 @@ clearInterval(blackoutLoadInt)
     geofs.aircraftList["1000"].dir = "|models|aircraft|generics|c182|";
     var aircraftChecked = new Boolean(0);
     var script2 = document.createElement("script");
-    script2.src = "https://raw.githack.com/geofs-pilot/realism-pack-modded/main/realismify.js";
+    script2.src = "https://raw.githack.com/geofs-pilot/realism-pack-modded/refs/heads/main/realismify.js";
     document.body.appendChild(script2);
     script2.onload = function () {
         realismify();
