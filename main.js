@@ -690,15 +690,15 @@ setInterval(
             d.restore();
             a.canvasAPI.drawRotatedSprite({ image: a.images.overlays, origin: [248, 0], size: [36, 28], center: [18, 210], destination: [256, 256], rotation: geofs.animation.getValue("aroll") * DEGREES_TO_RAD, translation: [0, 0] });
             d.drawImage(a.images.background, 0, 0);
-            a.canvasAPI.drawSprite({
-                image: a.images.overlays,
-                origin: [230, 239],
-                size: [51, 30],
-                center: [26, 15],
-                destination: c,
-                    //, clamp(100 * geofs.calculatedAOA, -150, 150)
-                translation: [clamp(6.5 * geofs.animation.getValue("NAV1CourseDeviation"), -75, 75), clamp(300 * geofs.calculatedAOA, -250, 250)],
-            });
+            // a.canvasAPI.drawSprite({
+            //     image: a.images.overlays,
+            //     origin: [230, 239],
+            //     size: [51, 30],
+            //     center: [26, 15],
+            //     destination: c,
+            //         //, clamp(100 * geofs.calculatedAOA, -150, 150)
+            //     translation: [clamp(6.5 * geofs.animation.getValue("NAV1CourseDeviation"), -75, 75), clamp(300 * geofs.calculatedAOA, -250, 250)],
+            // });
             d.lineWidth = 2;
             d.font = "20px sans-serif";
             d.textAlign = "right";
