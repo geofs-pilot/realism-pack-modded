@@ -279,7 +279,7 @@ clearInterval(blackoutLoadInt)
         runClickableCockpits();
     };
     var scriptVC = document.createElement("script");
-    scriptVC.src = "https://raw.githack.com/geofs-pilot/vortexCon-f-16-fix/main/vcon.js";
+    scriptVC.src = "https://raw.githack.com/geofs-pilot/realism-pack-modded/refs/heads/main/vcon.js";
     document.body.appendChild(scriptVC);
     scriptVC.onload = function () {
         runVortexCons();
