@@ -6,7 +6,8 @@ added 6 ejectable acft, xb70, x15, a10, dassault mirage, f14, f15, f22, f35, sr7
 improved ejection script <br/>
 added a bunch more propwash acft <br/>
 updated fbw <br/>
-updated vortexcon to include f16<br/>
+updated vortexcon to include f16 and also to log warnings every 10 seconds rather than every 100ms <br/>
 updated a typo in 737 immersion sounds - author is Ariakim Taiyo not AbormalHuman <br/>
 updated SSR with a try-catch and log errors only once every 10s <br/>
-removed 2 broken functions from SFX, then deleted sfx altogether - not as immersive and comprehensive as original sfx, and didnt work half the time
+removed 2 broken functions from SFX, then deleted sfx altogether - not as immersive and comprehensive as original sfx, and didnt work half the time <br/>
+deleted the hud fpv as a more accurate fpv is included in the all in one addon
