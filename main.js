@@ -27,7 +27,7 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
     //this breaks things if its run before terrain has loaded
     //geofs.api.waterDetection.create();
     lagReductionInterval = setInterval(function () {
-        geofs.savePreferencesPanel();
+        //geofs.savePreferencesPanel();
         geofs.api.renderingSettings.degradedCollisions = true;
         geofs.api.renderingSettings.lowResRunways = true;
     }, 100);
