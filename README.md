@@ -11,3 +11,4 @@ updated a typo in 737 immersion sounds - author is Ariakim Taiyo not AbormalHuma
 updated SSR with a try-catch and log errors only once every 10s <br/>
 removed 2 broken functions from SFX, then deleted sfx altogether - not as immersive and comprehensive as original sfx, and didnt work half the time <br/>
 deleted the hud fpv as a more accurate fpv is included in the all in one addon
+deleted savePreferencesPanel() from lag reduction script so that joystick axis and button indicator bars don't get frozen up
