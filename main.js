@@ -53,8 +53,12 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
     audio.impl.html5.playFile("https://142420819-645052386429616373.preview.editmysite.com/uploads/1/4/2/4/142420819/wind.mp3")
         }
     },1000)
+
+    const PWAircraft= new Set ([14, 16, 28, 1014, 1019, 2000, 2395, 3289, 3436, 4398, 4401, 5002, 5499, 5486, 21, 2, 2808, 1, 8, 12, 13, 40, 1069, 2750, 4251, 2786, 2976, 4390, 5061, 4341, 3211, 4596, 4409, 22, 23, 31, 11]);
     propwashInt = setInterval(function(){
-        if (geofs.aircraft.instance.id == 21 || geofs.aircraft.instance.id == 2 || geofs.aircraft.instance.id == 2808 || geofs.aircraft.instance.id == 1 || geofs.aircraft.instance.id == 8 || geofs.aircraft.instance.id == 12 || geofs.aircraft.instance.id == 13 || geofs.aircraft.instance.id == 40 || geofs.aircraft.instance.id == 1069 || geofs.aircraft.instance.id == 2750 || geofs.aircraft.instance.id == 4251 || geofs.aircraft.instance.id == 2786 || geofs.aircraft.instance.id == 2976 || geofs.aircraft.instance.id == 4390 || geofs.aircraft.instance.id == 5061 || geofs.aircraft.instance.id == 4341 || geofs.aircraft.instance.id == 3211 || geofs.aircraft.instance.id == 4596 || geofs.aircraft.instance.id == 4409 || geofs.aircraft.instance.id == 22 || geofs.aircraft.instance.id == 23 || geofs.aircraft.instance.id == 31 || geofs.aircraft.instance.id == 11)  {
+        let checkNumber = Number(geofs.aircraft.instance.id);
+        window.hasPW = PWAircraft.has(checkNumber);
+        if (hasPW)  {
     if (geofsAddonAircraft.isTruck != 1) {
     geofs.aircraft.instance.airfoils.forEach(function(e){
     if (e.forceDirection == 2) {

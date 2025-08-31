@@ -1,3 +1,5 @@
+    const EJAircraft= new Set ([5431, 5405, 3, 7, 29, 18, 4172, 3617, 2581, 2857, 2948, 2988, 2310, 3591, 5229, 2364, 1024, 27]);
+   
     function runEjections() {
         //so you don't get notified about the ejection seats every single second
         var notifiedEject = new Boolean(0)
@@ -7,7 +9,9 @@
         var ejected = new Boolean(1);
         function checkForEjections() {
             //if in an aircraft with ejection seats
-            if (geofs.aircraft.instance.id == 5431 || geofs.aircraft.instance.id == 5405 || geofs.aircraft.instance.id == 3 || geofs.aircraft.instance.id == 7 || geofs.aircraft.instance.id == 29 || geofs.aircraft.instance.id == 18 || geofs.aircraft.instance.id == 4172 || geofs.aircraft.instance.id == 3617 || geofs.aircraft.instance.id == 2581 || geofs.aircraft.instance.id == 2857 || geofs.aircraft.instance.id == 2948 || geofs.aircraft.instance.id == 2988 || geofs.aircraft.instance.id == 2310 || geofs.aircraft.instance.id == 3591 || geofs.aircraft.instance.id == 5229 || geofs.aircraft.instance.id == 2364) {
+            let checkNumber = Number(geofs.aircraft.instance.id);
+            window.hasEJ = EJAircraft.has(checkNumber);
+            if (window.hasEJ) {
                 //notifying you of the existence of ejection seats
                 if (notifiedEject == 0) {
                     ui.notification.show("Press E while airborne to eject");
