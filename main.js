@@ -54,7 +54,7 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
         }
     },1000)
 
-    const PWAircraft= new Set ([14, 16, 28, 1014, 1019, 2000, 2395, 3289, 3436, 4398, 4401, 5002, 5499, 5486, 21, 2, 2808, 1, 8, 12, 13, 40, 1069, 2750, 4251, 2786, 2976, 4390, 5061, 4341, 3211, 4596, 4409, 22, 23, 31, 11]);
+    const PWAircraft= new Set ([1026, 1069, 14, 16, 28, 1014, 1019, 2000, 2395, 3289, 3436, 4398, 4401, 5002, 5499, 5486, 21, 2, 2808, 1, 8, 12, 13, 40, 1069, 2750, 4251, 2786, 2976, 4390, 5061, 4341, 3211, 4596, 4409, 22, 23, 31, 11]);
     propwashInt = setInterval(function(){
         let checkNumber = Number(geofs.aircraft.instance.id);
         window.hasPW = PWAircraft.has(checkNumber);
@@ -240,10 +240,15 @@ clearInterval(blackoutLoadInt)
         showTheStars();
     }, 1000);
 */
+    const BCAircraft= new Set ([9, 52, 2840, 4090, 1025, 2806, 4197, 5002]);
+
     function runBladeCollisions() {
+        let checkNumber = Number(geofs.aircraft.instance.id);
+        window.hasBC = BCAircraft.has(checkNumber);
+        if (window.hasBC) {
+            console.log(hasBC)
         if (geofs.animation.values.aroll > 70 || geofs.animation.values.aroll < -70) {
             if (geofs.animation.values.haglFeet <= 5 && geofs.preferences.crashDetection == 1) {
-                if (geofs.aircraft.instance.id == 9 || geofs.aircraft.instance.id == 52 || geofs.aircraft.instance.id == 2840 || geofs.aircraft.instance.id == 4090) {
                     geofs.aircraft.instance.crash();
                 }
             }
