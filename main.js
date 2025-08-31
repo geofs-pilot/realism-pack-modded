@@ -54,7 +54,7 @@ flankerStallInt = setInterval(function(){flankerStall()},3000)
         }
     },1000)
 
-    const PWAircraft= new Set ([1026, 1069, 14, 16, 28, 1014, 1019, 2000, 2395, 3289, 3436, 4398, 4401, 5002, 5499, 5486, 21, 2, 2808, 1, 8, 12, 13, 40, 1069, 2750, 4251, 2786, 2976, 4390, 5061, 4341, 3211, 4596, 4409, 22, 23, 31, 11]);
+    const PWAircraft= new Set ([1026, 1069, 14, 16, 28, 1014, 1019, 2000, 2395, 3289, 3436, 4398, 4401, 5486, 21, 2, 2808, 1, 8, 12, 13, 40, 1069, 2750, 4251, 2786, 2976, 4390, 5061, 4341, 3211, 4596, 4409, 22, 23, 31, 11]);
     propwashInt = setInterval(function(){
         let checkNumber = Number(geofs.aircraft.instance.id);
         window.hasPW = PWAircraft.has(checkNumber);
