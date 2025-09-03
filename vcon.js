@@ -118,15 +118,15 @@ updateVCondensation = function() {
 geofs.fx.vcondensationEmitterLeft = new geofs.fx.ParticleEmitter({
 				anchor: geofs.aircraft.instance.definition.parts[geofs.bodyID].collisionPoints[geofs.tipIndexL],
             duration: 1E10,
-            rate: .5,
+            rate: 0.5,
             life: 1000,
             easing: "easeOutQuart",
             startScale: .0015,
-            endScale: .0015,
+            endScale: .0025,
             randomizeStartScale: 0.00001,
             randomizeEndScale: .0001,
-            startOpacity: 0.5,
-            endOpacity: 0.0001,
+            startOpacity: 0.8,
+            endOpacity: 0.001,
             startRotation: "random",
             texture: "whitesmoke"
 })
@@ -137,11 +137,11 @@ geofs.fx.vcondensationEmitterRight = new geofs.fx.ParticleEmitter({
             life: 1000,
             easing: "easeOutQuart",
             startScale: .0015,
-            endScale: .0015,
+            endScale: .0025,
             randomizeStartScale: 0.00001,
             randomizeEndScale: .0001,
-            startOpacity: 0.5,
-            endOpacity: 0.0001,
+            startOpacity: 0.8,
+            endOpacity: 0.001,
             startRotation: "random",
             texture: "whitesmoke"
 })
@@ -157,3 +157,7 @@ condensationInt = setInterval(function(){
 	updateVCondensation()
 },100)
 }
+
+
+
+runVortexCons(); //temporary!
