@@ -161,3 +161,16 @@ condensationInt = setInterval(function(){
 
 
 runVortexCons(); //temporary!
+
+            // duration: 1E10,
+            // rate: .5,
+            // life: 1000,
+            // easing: "easeOutQuart",
+            // startScale: .0015,
+            // endScale: .0015,
+            // randomizeStartScale: 0.00001,
+            // randomizeEndScale: .0001,
+            // startOpacity: 0.5,
+            // endOpacity: 0.0001,
+            // startRotation: "random",
+            // texture: "whitesmoke"
