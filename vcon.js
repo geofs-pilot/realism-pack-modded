@@ -160,7 +160,7 @@ condensationInt = setInterval(function(){
 
 
 
-runVortexCons(); //temporary!
+//runVortexCons(); //temporary!
 
             // duration: 1E10,
             // rate: .5,
