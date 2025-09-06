@@ -240,7 +240,7 @@ clearInterval(blackoutLoadInt)
         showTheStars();
     }, 1000);
 */
-    const BCAircraft= new Set ([9, 52, 2840, 4090, 1025, 2806, 4197, 5002, 2806]);
+    const BCAircraft= new Set ([9, 52, 2840, 4090, 1025, 2806, 4197, 2806]);
 
     function runBladeCollisions() {
         let checkNumber = Number(geofs.aircraft.instance.id);
