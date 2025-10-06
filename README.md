@@ -1,5 +1,5 @@
 not my addon, original can be found here https://github.com/NVB9ALT/Realism-pack./tree/main <br/>
-mainly for use in the [all-in-one addon](https://github.com/geofs-pilot/GeoFS-All-in-one-Addon/tree/main) <br/>
+a collection of others' scripts that I modified/updated, mainly for use in the [all-in-one addon](https://github.com/geofs-pilot/GeoFS-All-in-one-Addon/tree/main) <br/>
 removed some UI notifications and commented the spoiler arm feature <br/>
 removed carrier catapults <br/>
 added several new ejectable acft including xb70, x15, a10, dassault mirage, f14, f15, f22, f35, sr71, alphajet, f16, su35 <br/>
